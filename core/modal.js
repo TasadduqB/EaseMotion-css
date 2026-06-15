@@ -92,3 +92,4 @@
     checkModal();
   }
 })();
+function cleanupModalListeners() { window.removeEventListener('hashchange', checkModal); document.removeEventListener('keydown', checkModalKey); }\nconst closeModalBtn = document.getElementById('close-modal');\ncloseModalBtn.addEventListener('click', cleanupModalListeners);
